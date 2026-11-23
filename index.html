@@ -9,6 +9,7 @@
 <meta property="og:description" content="Ven a conocer tu tierra en el KM 44. Hectáreas desde S/ 69,000 · Lotes de 1,000 m² desde S/ 14,900. Registro gratuito.">
 <meta property="og:image" content="img/flyer.jpg">
 <meta name="theme-color" content="#0B4D32">
+<link rel="icon" href="img/logo_encanto_t.png">
 <link rel="preload" as="image" href="img/hero_key.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +25,7 @@
 html{scroll-behavior:smooth}
 body{font-family:Montserrat,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.5;overflow-x:hidden}
 img,video{max-width:100%;display:block}
+:where(img[width][height]){height:auto}
 a{color:inherit}
 .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
 .anton{font-family:Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase;font-weight:400}
@@ -757,7 +759,7 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       <div class="ev reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14l2 2 4-4"/></svg></div><h3>Documentos en mano</h3><p>Revisa la partida registral y resuelve tus dudas con el equipo de Infinity Group.</p></div>
     </div>
     <div class="raffle reveal">
-      <img src="img/sorteo.webp" alt="Sorteo de un auto cero kilómetros" loading="lazy">
+      <img src="img/sorteo.webp" alt="Sorteo de un auto cero kilómetros" loading="lazy" srcset="img/sorteo-480.webp 480w, img/sorteo-800.webp 800w, img/sorteo.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="676" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoQAAkAA8BgJbACdAYsPgIASEyYAOIVv0dm8pUb6gtjeM34nrG+7cO5LNJn3TgPxwAMDv9s7kqwKWFa4/G4zVjRDqgGMlcS1K7m8+21vdP8UwuUWp6BscYyfb3nbFb/CtNX4AAA) center/cover">
       <div class="txt">
         <span class="kicker" style="color:var(--gold-2)">Compra y participa</span>
         <h3>Sorteo de un <span class="gold-text">auto 0 km</span></h3>
@@ -814,8 +816,8 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       </div>
     </div>
     <div class="slides2">
-      <figure class="slide reveal"><img src="img/pdf/ubicacion.webp" alt="Mapa de ubicación estratégica entre Pucallpa y Campo Verde" loading="lazy"><figcaption>Ubicación estratégica entre Pucallpa y Campo Verde</figcaption></figure>
-      <figure class="slide reveal"><img src="img/pdf/tren.webp" alt="Proyecto del tren bioceánico Chancay–Pucallpa–Brasil" loading="lazy"><figcaption>Proyecto del Tren Bioceánico Chancay–Pucallpa–Brasil (en cartera del MTC)</figcaption></figure>
+      <figure class="slide reveal"><img src="img/pdf/ubicacion.webp" alt="Mapa de ubicación estratégica entre Pucallpa y Campo Verde" loading="lazy" srcset="img/pdf/ubicacion-480.webp 480w, img/pdf/ubicacion-800.webp 800w, img/pdf/ubicacion.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAkAA8BgJbACw7EPhq3ukgsAAP6JEo/9JeyIg/8d16dDrmTduWEG0ut75IxZk2Mk9tYcVw9aiJC+PNvXC2WiEAA=) center/cover"><figcaption>Ubicación estratégica entre Pucallpa y Campo Verde</figcaption></figure>
+      <figure class="slide reveal"><img src="img/pdf/tren.webp" alt="Proyecto del tren bioceánico Chancay–Pucallpa–Brasil" loading="lazy" srcset="img/pdf/tren-480.webp 480w, img/pdf/tren-800.webp 800w, img/pdf/tren.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAkAA8BgJaACdAEWUNLI4MMAAPvko2W3X+0Lt2+awtm6aSzRARxwf5utrrUqUPH3Bbozah7g/SQ2IpjHkmZfGeZJAAAA) center/cover"><figcaption>Proyecto del Tren Bioceánico Chancay–Pucallpa–Brasil (en cartera del MTC)</figcaption></figure>
     </div>
   </div>
 </section>
@@ -828,7 +830,7 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       <p class="sub">10,000 m² son tuyos para sembrar, criar, recibir visitantes o descansar con tu familia. Así podría verse.</p>
     </div>
     <div class="vis-hero reveal">
-      <img src="img/vision_aerea.webp" alt="Ilustración de una hectárea en la Amazonía con cacao, plátano, una piscigranja y un bungalow" loading="lazy">
+      <img src="img/vision_aerea.webp" alt="Ilustración de una hectárea en la Amazonía con cacao, plátano, una piscigranja y un bungalow" loading="lazy" srcset="img/vision_aerea-480.webp 480w, img/vision_aerea-800.webp 800w, img/vision_aerea.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="671" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA8BgJbACdAD0s3n3reAA/s0L7sGv2N/jgIN7/GfNsttgvKWA2bUrulQnWRl6hdRjki5ZzfyPYjHv/d2F+QAAAA==) center/cover">
       <div class="vis-tag">Imagen referencial</div>
       <div class="vis-over">
         <b class="anton">10,000 m² = como 50 lotes de 200 m²</b>
@@ -836,10 +838,10 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       </div>
     </div>
     <div class="vis-grid">
-      <article class="vis reveal"><div class="vis-img"><img src="img/vision_cacao.webp" alt="Familia cosechando cacao" loading="lazy"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">01</span><h3>Siembra y cosecha</h3><p>Cacao, plátano, papaya, yuca y frutales. Tierra de selva con clima cálido todo el año.</p></div></article>
-      <article class="vis reveal"><div class="vis-img"><img src="img/vision_paco.webp" alt="Piscigranja con peces paco" loading="lazy"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">02</span><h3>Piscigranja y crianza</h3><p>Pozas de paco, crianza de gallinas y animales menores para tu mesa o para vender.</p></div></article>
-      <article class="vis reveal"><div class="vis-img"><img src="img/vision_bungalow.webp" alt="Bungalows ecológicos con piscina en la selva" loading="lazy"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">03</span><h3>Turismo de naturaleza</h3><p>Bungalows ecológicos, piscina y comida típica: un negocio para recibir visitantes. Es un ejemplo de lo que puedes construir.</p></div></article>
-      <article class="vis reveal"><div class="vis-img"><img src="img/vision_familia.webp" alt="Familia descansando en su casa de campo" loading="lazy"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">04</span><h3>Tu casa de campo</h3><p>Un lugar propio para los fines de semana, la familia y, más adelante, tu retiro.</p></div></article>
+      <article class="vis reveal"><div class="vis-img"><img src="img/vision_cacao.webp" alt="Familia cosechando cacao" loading="lazy" srcset="img/vision_cacao-480.webp 480w, img/vision_cacao.webp 896w" sizes="auto, (max-width:700px) 92vw, 560px" width="896" height="1120" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPwForE6rJaQiMAgBYCAJagC7MoAluQ1muR3e/4h6T3YAAPXHAhAITSEtFoEnm+z5EEo6FEf9oNIWNyhCYeqfggapg/KMLYRUOZO5UGzvv3TMt3rUHNnd0KvqbAuNqGRY3JuObrvRJamHXrV9uL7ow9NSCvizIu9QT1jW7PlyE764AA==) center/cover"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">01</span><h3>Siembra y cosecha</h3><p>Cacao, plátano, papaya, yuca y frutales. Tierra de selva con clima cálido todo el año.</p></div></article>
+      <article class="vis reveal"><div class="vis-img"><img src="img/vision_paco.webp" alt="Piscigranja con peces paco" loading="lazy" srcset="img/vision_paco-480.webp 480w, img/vision_paco.webp 896w" sizes="auto, (max-width:700px) 92vw, 560px" width="896" height="1120" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAwCdASoQABQAPwForE8rJaQiMAgBYCAJYgCdACC3GpAs11JWQAD6kHSw6/ni390CDzbnLwKA9LLTZHesigwXtUpL1JlDHEoL9INmFu0Fnm/xcJl9LNhVAAkvUq2QlCZJQjlL5nEpJaC8AAA=) center/cover"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">02</span><h3>Piscigranja y crianza</h3><p>Pozas de paco, crianza de gallinas y animales menores para tu mesa o para vender.</p></div></article>
+      <article class="vis reveal"><div class="vis-img"><img src="img/vision_bungalow.webp" alt="Bungalows ecológicos con piscina en la selva" loading="lazy" srcset="img/vision_bungalow-480.webp 480w, img/vision_bungalow.webp 896w" sizes="auto, (max-width:700px) 92vw, 560px" width="896" height="1120" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAACwAwCdASoQABQAPwFqrE6rJiQiMAgBYCAJZgCdAYwwuPDv/heaBAD+zcDmLMjEQD6UB2bojSpZ+E6cMflbXBjA1CGk/niInJYpjrIpPzt9gh35l53z8Na9FblYVaI3eDyZ08WMHMLfRZ9KIm6YTQt3HVD1Ils6rvWgvoRbjIfqgAAA) center/cover"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">03</span><h3>Turismo de naturaleza</h3><p>Bungalows ecológicos, piscina y comida típica: un negocio para recibir visitantes. Es un ejemplo de lo que puedes construir.</p></div></article>
+      <article class="vis reveal"><div class="vis-img"><img src="img/vision_familia.webp" alt="Familia descansando en su casa de campo" loading="lazy" srcset="img/vision_familia-480.webp 480w, img/vision_familia.webp 896w" sizes="auto, (max-width:700px) 92vw, 560px" width="896" height="1120" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoQABQAPwForE6rJiQiMAgBYCAJZgCdL1yBvfWYLIMfoWwA+LMnYEwUkxfTEVQ5Bw3L8Pys+xARSr/0ffKQxsn3WsrKnRE049znkWjk4Y48T3xW1/5+awPE754vZJfG/ZYk6FCh6oR2ygK9WUH3585AAAA=) center/cover"><i>Imagen referencial</i></div><div class="vis-txt"><span class="n">04</span><h3>Tu casa de campo</h3><p>Un lugar propio para los fines de semana, la familia y, más adelante, tu retiro.</p></div></article>
     </div>
 
     <div class="why-zone">
@@ -881,12 +883,12 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       <button class="tab" data-tab="p4" role="tab">Separadas y vendidas</button>
     </div>
     <div class="tab-panels reveal">
-      <a class="tp on" id="p1" href="img/pdf/plano_hectareas.jpg" target="_blank"><img src="img/pdf/plano_hectareas.jpg" alt="Plano de las hectáreas de 10,000 m²" loading="lazy"></a>
-      <a class="tp" id="p2" href="img/pdf/plano_lotes_1.jpg" target="_blank"><img src="img/pdf/plano_lotes_1.jpg" alt="Plano de lotes de 1,000 m², primera etapa" loading="lazy"></a>
-      <a class="tp" id="p3" href="img/pdf/plano_lotes_2.webp" target="_blank"><img src="img/pdf/plano_lotes_2.webp" alt="Plano de lotes de 1,000 m², segunda etapa" loading="lazy"></a>
-      <a class="tp" id="p4" href="img/plano.jpg" target="_blank"><img src="img/plano.jpg" alt="Plano con parcelas separadas y vendidas" loading="lazy" style="background:#0d3b26;object-fit:contain"></a>
+      <a class="tp on" id="p1" href="img/pdf/plano_hectareas.jpg" target="_blank"><img src="img/pdf/plano_hectareas.jpg" alt="Plano de las hectáreas de 10,000 m²" loading="lazy" srcset="img/pdf/plano_hectareas-480.webp 480w, img/pdf/plano_hectareas-800.webp 800w, img/pdf/plano_hectareas.jpg 1528w" sizes="auto, (max-width:700px) 92vw, 560px" width="1528" height="980" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAoAA8BgJaACdADM3EuXG8W0AADyog5RW6lip699fiYP7kAVy1R46eUVv7BwXK8dOFV8PPqW4o33F27nuGi9t1IiZiS3lHzCfvAG0QAAAA==) center/cover"></a>
+      <a class="tp" id="p2" href="img/pdf/plano_lotes_1.jpg" target="_blank"><img src="img/pdf/plano_lotes_1.jpg" alt="Plano de lotes de 1,000 m², primera etapa" loading="lazy" srcset="img/pdf/plano_lotes_1-480.webp 480w, img/pdf/plano_lotes_1-800.webp 800w, img/pdf/plano_lotes_1.jpg 1252w" sizes="auto, (max-width:700px) 92vw, 560px" width="1252" height="800" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAoAA8BgJaACdAYvNqodeVvpAAD+3LykOfTAsvmZ94Rl3FBbERaTJYlCRFRbI0m75eBhMwxkzYh0FfVjRGGzKT2bCPnItZRjVkSlRfRkA+J/ijdJ5bEaO7DwAA==) center/cover"></a>
+      <a class="tp" id="p3" href="img/pdf/plano_lotes_2.webp" target="_blank"><img src="img/pdf/plano_lotes_2.webp" alt="Plano de lotes de 1,000 m², segunda etapa" loading="lazy" srcset="img/pdf/plano_lotes_2-480.webp 480w, img/pdf/plano_lotes_2-800.webp 800w, img/pdf/plano_lotes_2.webp 1554w" sizes="auto, (max-width:700px) 92vw, 560px" width="1554" height="1000" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAoAA8BgJbACdAEegU5pLgAA/n6toGA8d9bBydgg8gsEeuYotzHBeWNbAeCwrM16kCvkHSc9cOfOIAA=) center/cover"></a>
+      <a class="tp" id="p4" href="img/plano.jpg" target="_blank"><img src="img/plano.jpg" alt="Plano con parcelas separadas y vendidas" loading="lazy" srcset="img/plano-480.webp 480w, img/plano-800.webp 800w, img/plano.jpg 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="1588" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABUAPwFqrE6rJiQiMAgBYCAJZACdMoADPtb9Mqe/MVElFtAA4l7TB6vnHD3O5/WfwezpmGP3/E7IFhwAp75mLpFfN2SZ42QoCaImXGroSX/YxAFzqaS2pJCRqxFYlwSgaJsXqp3piAo3Vh1HPGKgUWIUEb4CED/fAkIAAAA=) center/cover;background:#0d3b26;object-fit:contain"></a>
     </div>
-    <figure class="slide wide reveal" style="margin-top:22px"><img src="img/pdf/hectarea_oportunidades.webp" alt="Una hectárea, múltiples oportunidades" loading="lazy"><figcaption>1 hectárea, muchas oportunidades: cacao, plátano, papaya, yuca, bungalows y crianza (imagen referencial)</figcaption></figure>
+    <figure class="slide wide reveal" style="margin-top:22px"><img src="img/pdf/hectarea_oportunidades.webp" alt="Una hectárea, múltiples oportunidades" loading="lazy" srcset="img/pdf/hectarea_oportunidades-480.webp 480w, img/pdf/hectarea_oportunidades-800.webp 800w, img/pdf/hectarea_oportunidades.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAkAA8BgJbACdAD78TrwAAD7ozJbAOMGDcG+5Ms5+x52Y3b2yPkdkBwhwH0pvXnM7kQAknL4nq+AkPIqlsk9OWCD9JZpN3XdKDQRuhNLAAAA) center/cover"><figcaption>1 hectárea, muchas oportunidades: cacao, plátano, papaya, yuca, bungalows y crianza (imagen referencial)</figcaption></figure>
   </div>
 </section>
 
@@ -922,7 +924,7 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
         </ul>
       </article>
     </div>
-    <figure class="slide wide reveal" style="margin-top:26px"><img src="img/pdf/plusvalia.webp" alt="Proyección de plusvalía 2026 a 2029" loading="lazy"><figcaption>Proyección estimada del precio por m² (referencial, no garantizada)</figcaption></figure>
+    <figure class="slide wide reveal" style="margin-top:26px"><img src="img/pdf/plusvalia.webp" alt="Proyección de plusvalía 2026 a 2029" loading="lazy" srcset="img/pdf/plusvalia-480.webp 480w, img/pdf/plusvalia-800.webp 800w, img/pdf/plusvalia.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAkAA8BgJYgAAqFftuNPZ+AA/vPuCT73C7BDv1h9UNRHTH53thbg5+tLeFvk8mWcj9y3h3/s1vW2ekZ+huAn5N8UxJxo+TfgAA==) center/cover"><figcaption>Proyección estimada del precio por m² (referencial, no garantizada)</figcaption></figure>
     <div class="sep reveal">Separa tu hectárea o tu lote con <b>S/ 2,500</b></div>
   </div>
 </section>
@@ -942,10 +944,10 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
     </div>
 
     <div class="trust-grid">
-      <figure class="slide reveal"><img src="img/pdf/doc_encanto.webp" alt="Documentación legal de El Encanto de Pucallpa, partida registral 11008305" loading="lazy"><figcaption><b>Documentación del terreno</b>Partida registral N° 11008305 a favor de Infinity Group MB. La independización se ingresó a Registros Públicos el 26 de octubre de 2026.</figcaption></figure>
-      <figure class="slide reveal"><img src="img/pdf/doc_infinity.webp" alt="Documentación legal de Infinity Group MB" loading="lazy"><figcaption><b>Documentación de la empresa</b>Infinity Group MB S.A.C. está constituida e inscrita en Registros Públicos.</figcaption></figure>
-      <figure class="slide reveal"><img src="img/pdf/7000_lotes.webp" alt="Más de 7,000 lotes vendidos" loading="lazy"><figcaption><b>Más de 7,000 lotes vendidos</b>Familias que ya confiaron en proyectos de Huaral y Chancay.</figcaption></figure>
-      <figure class="slide reveal"><img src="img/pdf/equipo.webp" alt="Equipo de Infinity Group MB" loading="lazy"><figcaption><b>Un equipo completo</b>Áreas legal, contable, comercial, ingenieros y arquitectos. Maquinaria pesada propia.</figcaption></figure>
+      <figure class="slide reveal"><img src="img/pdf/doc_encanto.webp" alt="Documentación legal de El Encanto de Pucallpa, partida registral 11008305" loading="lazy" srcset="img/pdf/doc_encanto-480.webp 480w, img/pdf/doc_encanto-800.webp 800w, img/pdf/doc_encanto.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA8BgJaAAApMONN7qAAD+5Ta0+t98LqfhZl+FIvd0Rb6RdXKcsF+bw2F2aK9M0y3dI6r4rz1TH6JVSTBQAAA=) center/cover"><figcaption><b>Documentación del terreno</b>Partida registral N° 11008305 a favor de Infinity Group MB. La independización se ingresó a Registros Públicos el 26 de octubre de 2026.</figcaption></figure>
+      <figure class="slide reveal"><img src="img/pdf/doc_infinity.webp" alt="Documentación legal de Infinity Group MB" loading="lazy" srcset="img/pdf/doc_infinity-480.webp 480w, img/pdf/doc_infinity-800.webp 800w, img/pdf/doc_infinity.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA8BgJaAAAvc46DP7iugA/baln0kScAK9Vh4bsynfdQJjwfgO+V+9fWUmM82+/GQAvnQUjyr/tvAAAA==) center/cover"><figcaption><b>Documentación de la empresa</b>Infinity Group MB S.A.C. está constituida e inscrita en Registros Públicos.</figcaption></figure>
+      <figure class="slide reveal"><img src="img/pdf/7000_lotes.webp" alt="Más de 7,000 lotes vendidos" loading="lazy" srcset="img/pdf/7000_lotes-480.webp 480w, img/pdf/7000_lotes-800.webp 800w, img/pdf/7000_lotes.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA8BgJaACdAYr6wacOQAAyVZ+AbkPHMDAegKPlIFaX8Fts0YMam9IXz+CfHuoArCj1JOnPiPziPGv0GdYxmTAAA==) center/cover"><figcaption><b>Más de 7,000 lotes vendidos</b>Familias que ya confiaron en proyectos de Huaral y Chancay.</figcaption></figure>
+      <figure class="slide reveal"><img src="img/pdf/equipo.webp" alt="Equipo de Infinity Group MB" loading="lazy" srcset="img/pdf/equipo-480.webp 480w, img/pdf/equipo-800.webp 800w, img/pdf/equipo.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAAkAA8BgJZgCdACqqjblCAD+QNIWQ8jKz4FSdQJ4Kks6TtFj0XprIalJGob0S8hGKgpf6peRVERH8I16WdZsc7YfH9m1Z0AEUWVNB/jPn7ugAAA=) center/cover"><figcaption><b>Un equipo completo</b>Áreas legal, contable, comercial, ingenieros y arquitectos. Maquinaria pesada propia.</figcaption></figure>
     </div>
 
     <div class="sold reveal">
@@ -983,11 +985,11 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       <blockquote class="reveal">"Es una buena inversión porque se revalora el dinero y se puede invertir en más cosas."<cite>— Señor Manuel, nuevo propietario</cite></blockquote>
     </div>
     <div class="photo-wall">
-      <img class="reveal" src="img/foro/grupo.webp" alt="Grupo de inversionistas en el foro de noviembre" loading="lazy">
-      <img class="reveal" src="img/foro/firma_cliente.webp" alt="Cliente con su carpeta de separación" loading="lazy">
-      <img class="reveal" src="img/foro/magaly_foro.webp" alt="Magaly Bermúdez presentando el proyecto en el foro" loading="lazy">
-      <img class="reveal" src="img/foro/barra.webp" alt="Barra de jugos y cócteles en el foro" loading="lazy">
-      <img class="reveal" src="img/notaria.webp" alt="Clientas en la Notaría Vargas Ugarte" loading="lazy">
+      <img class="reveal" src="img/foro/grupo.webp" alt="Grupo de inversionistas en el foro de noviembre" loading="lazy" srcset="img/foro/grupo-480.webp 480w, img/foro/grupo.webp 825w" sizes="auto, (max-width:700px) 92vw, 560px" width="825" height="1100" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBACdASoQABUAPwFqrE6rJiQiMAgBYCAJQBWABDJAHeyC+YHiDkaCDwAA/FL4mUM53S53BeMd55zmU93o+yqYOeJIFedqe1h6ehhmkWUgZ2hnK1iqj+yP5cDJFfShZ5pP4vPhwIaSuUJRgrxYKa5zv8BSJfp24f+jwGKKqfvgt/OgJvpr42XOMHKJ1EZlGgAAAA==) center/cover">
+      <img class="reveal" src="img/foro/firma_cliente.webp" alt="Cliente con su carpeta de separación" loading="lazy" srcset="img/foro/firma_cliente-480.webp 480w, img/foro/firma_cliente.webp 825w" sizes="auto, (max-width:700px) 92vw, 560px" width="825" height="1100" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABUAPwForE6rJaQiMAgBYCAJYwDCgB4mhihlZvLBentjgAD8gyQc/pzt8fGGalrUL9RyludQb971lZzsLLgjNl/3v9z4p+UiIPg+ZYcx5qkbXovrfDLAf8k/zNi3FqnyRcuD3cRW3WlD5YDXhN/AO6rs9BpWmokyzYP3BPMjwAAA) center/cover">
+      <img class="reveal" src="img/foro/magaly_foro.webp" alt="Magaly Bermúdez presentando el proyecto en el foro" loading="lazy" srcset="img/foro/magaly_foro-480.webp 480w, img/foro/magaly_foro.webp 825w" sizes="auto, (max-width:700px) 92vw, 560px" width="825" height="1100" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADwAwCdASoQABUAPwFqrE8rJiQiMAgBYCAJZgCAAAfRgYh+R32kfW5AAPyCA28hQTnKAzV/+MIx9iA0Hh31p8CF6c9qF2rLP/jT/CbbiRDTUt45+fEdiQbv0z6LXsCCZPPZQ4rI8danzlci384ZG5D/Ggl//lmsEPxWM1u4ZzyeKZv/UajovgCguVU+lQS7tJN5z1mPLAOUAAAA) center/cover">
+      <img class="reveal" src="img/foro/barra.webp" alt="Barra de jugos y cócteles en el foro" loading="lazy" srcset="img/foro/barra-480.webp 480w, img/foro/barra.webp 825w" sizes="auto, (max-width:700px) 92vw, 560px" width="825" height="1100" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAQBACdASoQABUAPwFqrE8rJiQiMAgBYCAJbACdAdwA1bLtqPNvarWu7AD+6Bwm51EfABfOwO2ZKsARb17FN5MXoj/dh0Ejr2LXYc3zbNxznhigUhmi+hux/nmC5a6t59uoEsQJDT+bynXiL8Dgc6XveEjx8cmGxXfdTPmNFWWPWrl8DD+kqFvpn/JM9xlkgg//tcbn0QWr8mpTwyAAAA==) center/cover">
+      <img class="reveal" src="img/notaria.webp" alt="Clientas en la Notaría Vargas Ugarte" loading="lazy" srcset="img/notaria-480.webp 480w, img/notaria-800.webp 800w, img/notaria.webp 960w" sizes="auto, (max-width:700px) 92vw, 560px" width="960" height="1200" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwAwCdASoQABQAPwForE6rJaQiMAgBYCAJbACo9Aocn8FSJPAA/uqXvFZuTLH36mlW/xmH2LzAJPVM4hkW9NpUeSxwI8OUBKJcvg6FB9hwEsfhvVj6ImSWFm8IgO6XO3c8ObjWAsPLuqtDP1BAk/AC2mBPpiSuzur+rT4BggAAAA==) center/cover">
     </div>
   </div>
 </section>
@@ -1001,10 +1003,10 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
     </div>
     <div class="proof">
       <div class="ph c7 tall reveal"><video autoplay muted loop playsinline poster="img/dron.webp" preload="none"><source src="img/dron.mp4" type="video/mp4"></video><div class="cap"><b>Desde el aire</b>Las hectáreas de El Encanto de Pucallpa</div></div>
-      <div class="ph c5 tall reveal"><img src="img/magaly.webp" alt="Magaly Bermúdez en una calle recién abierta del proyecto" loading="lazy"><div class="cap"><b>En la obra</b>Magaly Bermúdez, gerente general, en una calle recién abierta</div></div>
-      <div class="ph c4 half reveal"><img src="img/maquinaria.webp" alt="Cargador frontal abriendo calles" loading="lazy"><div class="cap"><b>Avance de obra</b>Maquinaria abriendo las calles</div></div>
-      <div class="ph c4 half reveal"><img src="img/monte.webp" alt="Vegetación del terreno" loading="lazy"><div class="cap"><b>Tierra de selva</b>Así es el terreno por dentro</div></div>
-      <div class="ph c4 reveal"><img src="img/plano.jpg" alt="Plano de las hectáreas con parcelas separadas y vendidas" loading="lazy" style="object-fit:contain;background:#0d3b26"><div class="cap"><b>Ya se están separando</b>Plano con parcelas separadas y vendidas</div></div>
+      <div class="ph c5 tall reveal"><img src="img/magaly.webp" alt="Magaly Bermúdez en una calle recién abierta del proyecto" loading="lazy" srcset="img/magaly-480.webp 480w, img/magaly.webp 900w" sizes="auto, (max-width:700px) 92vw, 560px" width="900" height="1200" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoQABUAPwForE8rJaQiMAgBYCAJYwCdABxJsjwQfhjkyC7emAD+18mvrFzYbwzJPzjX9adyeTMBSzVAqSqLX1kJcdOXcwxeGJxYC78r4LoxRGuEfUCAB4jURWyYde8sOphUEIE9OI0qJ1DwufuSsE7dpky8AA==) center/cover"><div class="cap"><b>En la obra</b>Magaly Bermúdez, gerente general, en una calle recién abierta</div></div>
+      <div class="ph c4 half reveal"><img src="img/maquinaria.webp" alt="Cargador frontal abriendo calles" loading="lazy" srcset="img/maquinaria-480.webp 480w, img/maquinaria.webp 900w" sizes="auto, (max-width:700px) 92vw, 560px" width="900" height="1200" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABUAPwForE6rJaQiMAgBYCAJZQDE+ExCmsn9knkAxDz4AP6a2+PTWZqRZjYGWl1bfGqLBTz7hh85LphU2VgVkA3Rc4CF9MOuQDT2hnKHVKAqVMhvN3BuQckyl8d2DHu+aLAA06jkECQxfr9wZawAAAA=) center/cover"><div class="cap"><b>Avance de obra</b>Maquinaria abriendo las calles</div></div>
+      <div class="ph c4 half reveal"><img src="img/monte.webp" alt="Vegetación del terreno" loading="lazy" srcset="img/monte-480.webp 480w, img/monte.webp 900w" sizes="auto, (max-width:700px) 92vw, 560px" width="900" height="1200" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoQABUAPwForE6rJaQiMAgBYCAJQBYdg3a2Lvbiv6VKAAD+oNj8Y8xs1poYUyEHn9HMT+wmBQsbLTs/RwkKsJIq0XQ3xXa5Kd0C+Soy4guhwyGPaZwUt10dgAA=) center/cover"><div class="cap"><b>Tierra de selva</b>Así es el terreno por dentro</div></div>
+      <div class="ph c4 reveal"><img src="img/plano.jpg" alt="Plano de las hectáreas con parcelas separadas y vendidas" loading="lazy" srcset="img/plano-480.webp 480w, img/plano-800.webp 800w, img/plano.jpg 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="1588" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABUAPwFqrE6rJiQiMAgBYCAJZACdMoADPtb9Mqe/MVElFtAA4l7TB6vnHD3O5/WfwezpmGP3/E7IFhwAp75mLpFfN2SZ42QoCaImXGroSX/YxAFzqaS2pJCRqxFYlwSgaJsXqp3piAo3Vh1HPGKgUWIUEb4CED/fAkIAAAA=) center/cover;object-fit:contain;background:#0d3b26"><div class="cap"><b>Ya se están separando</b>Plano con parcelas separadas y vendidas</div></div>
     </div>
     <div class="docs">
       <div class="doc reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><div><h4>Partida registral N° 11008305</h4><p>Inscrita en Registros Públicos (SUNARP) a favor de Infinity Group MB.</p></div></div>
@@ -1012,8 +1014,8 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       <div class="doc reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4"/></svg><div><h4>Infinity Group MB S.A.C.</h4><p>Más de 7,000 lotes vendidos en proyectos de Huaral y Chancay.</p></div></div>
     </div>
     <div class="proof" style="margin-top:14px">
-      <div class="ph c6 reveal" style="min-height:280px"><img src="img/notaria.webp" alt="Clientas en la Notaría Vargas Ugarte" loading="lazy" style="object-position:top"><div class="cap"><b>Clientas reales</b>Firma de contrato en la Notaría Vargas Ugarte</div></div>
-      <div class="ph c6 reveal" style="min-height:280px"><img src="img/pucallpa.webp" alt="Letras de Pucallpa en la plaza" loading="lazy"><div class="cap"><b>A solo 44 km</b>De la ciudad de Pucallpa por la Federico Basadre</div></div>
+      <div class="ph c6 reveal" style="min-height:280px"><img src="img/notaria.webp" alt="Clientas en la Notaría Vargas Ugarte" loading="lazy" srcset="img/notaria-480.webp 480w, img/notaria-800.webp 800w, img/notaria.webp 960w" sizes="auto, (max-width:700px) 92vw, 560px" width="960" height="1200" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwAwCdASoQABQAPwForE6rJaQiMAgBYCAJbACo9Aocn8FSJPAA/uqXvFZuTLH36mlW/xmH2LzAJPVM4hkW9NpUeSxwI8OUBKJcvg6FB9hwEsfhvVj6ImSWFm8IgO6XO3c8ObjWAsPLuqtDP1BAk/AC2mBPpiSuzur+rT4BggAAAA==) center/cover;object-position:top"><div class="cap"><b>Clientas reales</b>Firma de contrato en la Notaría Vargas Ugarte</div></div>
+      <div class="ph c6 reveal" style="min-height:280px"><img src="img/pucallpa.webp" alt="Letras de Pucallpa en la plaza" loading="lazy" srcset="img/pucallpa-480.webp 480w, img/pucallpa.webp 900w" sizes="auto, (max-width:700px) 92vw, 560px" width="900" height="1200" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoQABUAPwFqrE6rJiQiMAgBYCAJZwCdMoADSyiu/ZBfmUTAAP60lLMI1iqeIc/ZJUxmeO1PqemX9YHv51x9MJaCaOaDVt5ChZI0EisrDTvFqtqIftYdpAAA) center/cover"><div class="cap"><b>A solo 44 km</b>De la ciudad de Pucallpa por la Federico Basadre</div></div>
     </div>
   </div>
 </section>
@@ -1026,15 +1028,15 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       <p class="sub">Si vienes de otra ciudad, el 28 también es una oportunidad para disfrutar la capital de Ucayali.</p>
     </div>
     <div class="tour">
-      <figure class="reveal"><img src="img/pdf/yarinacocha.webp" alt="Laguna de Yarinacocha" loading="lazy"><figcaption>Laguna de Yarinacocha</figcaption></figure>
-      <figure class="reveal"><img src="img/pdf/rio_ucayali.webp" alt="Río Ucayali" loading="lazy"><figcaption>Río Ucayali</figcaption></figure>
-      <figure class="reveal"><img src="img/pdf/plaza_armas.webp" alt="Plaza de Armas de Pucallpa" loading="lazy"><figcaption>Plaza de Armas de Pucallpa</figcaption></figure>
-      <figure class="reveal"><img src="img/pdf/reloj.webp" alt="Plaza del Reloj Público" loading="lazy"><figcaption>Plaza del Reloj Público</figcaption></figure>
-      <figure class="reveal"><img src="img/pdf/parque.webp" alt="Parque Natural de Pucallpa" loading="lazy"><figcaption>Parque Natural de Pucallpa</figcaption></figure>
-      <figure class="reveal"><img src="img/pdf/plaza_yarinacocha.webp" alt="Plaza de Armas de Yarinacocha" loading="lazy"><figcaption>Plaza de Armas de Yarinacocha</figcaption></figure>
+      <figure class="reveal"><img src="img/pdf/yarinacocha.webp" alt="Laguna de Yarinacocha" loading="lazy" srcset="img/pdf/yarinacocha-480.webp 480w, img/pdf/yarinacocha-800.webp 800w, img/pdf/yarinacocha.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA8BgJbACdAD57zZtEAD7/5y/ZgzNm/I7QQa2lOxuWeRo4kkYeNtU94/WwkIYj9YFyz0LbwbbWC3fRzbuorvDIuHLrjAmtZqAAAA=) center/cover"><figcaption>Laguna de Yarinacocha</figcaption></figure>
+      <figure class="reveal"><img src="img/pdf/rio_ucayali.webp" alt="Río Ucayali" loading="lazy" srcset="img/pdf/rio_ucayali-480.webp 480w, img/pdf/rio_ucayali-800.webp 800w, img/pdf/rio_ucayali.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAkAA8BgJbACdAEe1USA54wA4DXRTatYycZWCxt0EgkBLKR/HXiKxFXNJSPzUEBzYdPrHxkPWg1JVOZmrvgA) center/cover"><figcaption>Río Ucayali</figcaption></figure>
+      <figure class="reveal"><img src="img/pdf/plaza_armas.webp" alt="Plaza de Armas de Pucallpa" loading="lazy" srcset="img/pdf/plaza_armas-480.webp 480w, img/pdf/plaza_armas-800.webp 800w, img/pdf/plaza_armas.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAkAA8BgJbACdH8AGMu7UoIgAP5r4ENoJXVTFYc2hTSec9TupkzvWw7Ewz4K0abxZe9QLBv5kkei5mWSmmYFfaApXwCJc9xGr3Ef83wAAA==) center/cover"><figcaption>Plaza de Armas de Pucallpa</figcaption></figure>
+      <figure class="reveal"><img src="img/pdf/reloj.webp" alt="Plaza del Reloj Público" loading="lazy" srcset="img/pdf/reloj-480.webp 480w, img/pdf/reloj-800.webp 800w, img/pdf/reloj.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAkAA8BgJbACdADJRRMvAAD83bShPTT9lN8N9UM1qkc6VgjTg974nUqb66t2hp4BJGT2qwXafpLgD/jD6tmb8gaMLZV+5xQAAA==) center/cover"><figcaption>Plaza del Reloj Público</figcaption></figure>
+      <figure class="reveal"><img src="img/pdf/parque.webp" alt="Parque Natural de Pucallpa" loading="lazy" srcset="img/pdf/parque-480.webp 480w, img/pdf/parque-800.webp 800w, img/pdf/parque.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA8BgJbACdH8AgpQ7+sAA/M/jsyvAZXBAIl05ySE/Tni+RsSQHT0AxmX5hwPBlYs2IbU6Y+QKE4SHzTxmirO2MCEAxbKfikhPYOl2AAAA) center/cover"><figcaption>Parque Natural de Pucallpa</figcaption></figure>
+      <figure class="reveal"><img src="img/pdf/plaza_yarinacocha.webp" alt="Plaza de Armas de Yarinacocha" loading="lazy" srcset="img/pdf/plaza_yarinacocha-480.webp 480w, img/pdf/plaza_yarinacocha-800.webp 800w, img/pdf/plaza_yarinacocha.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAkAA8BgJbACdACYIz/IAP6jFfTOX51uoGGjD4A8eNQdN5XGKBGq0fynp16p937xuGLHROX60oDwKgtEZYCDrOVw9kAA) center/cover"><figcaption>Plaza de Armas de Yarinacocha</figcaption></figure>
     </div>
     <div class="travel reveal">
-      <img src="img/pdf/buses.webp" alt="Empresas de bus que llegan a Pucallpa: Movil Bus, Transmar, NorPerú y Real Chancas" loading="lazy">
+      <img src="img/pdf/buses.webp" alt="Empresas de bus que llegan a Pucallpa: Movil Bus, Transmar, NorPerú y Real Chancas" loading="lazy" srcset="img/pdf/buses-480.webp 480w, img/pdf/buses-800.webp 800w, img/pdf/buses.webp 1200w" sizes="auto, (max-width:700px) 92vw, 560px" width="1200" height="675" decoding="async" style="background:#0B4D32 url(data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA8BgJYwC7AEPgecC0gAA/vU+j5t5q3G2BqRVfP+YEPYKPfQbQcafx2Uqy616YszlEFm2fQw3w+VQAA==) center/cover">
       <div>
         <span class="kicker">¿Vienes de Lima u otra región?</span>
         <h3 class="anton">Tu pasaje <span class="gold-text">ida y vuelta, cubierto</span></h3>
@@ -1262,6 +1264,22 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
       if (e.isIntersecting && !lite) { warm(e.target, "auto"); seen.unobserve(e.target); } }); }, {threshold:0.6});
     vids.forEach(function(v){ near.observe(v); seen.observe(v); });
   })();
+  // Imágenes: cuando la página ya cargó, baja el resto en segundo plano (en orden), así al bajar ya están listas
+  (function(){
+    var c = navigator.connection || {}; if (c.saveData || /(^|-)2g$/.test(c.effectiveType || "")) return;
+    function go(){
+      var list = [].slice.call(document.querySelectorAll('img[loading="lazy"]')).filter(function(i){ return !i.complete; });
+      var k = 0;
+      function next(){ var i = list[k++]; if (!i) return; if (i.complete) return next();
+        i.addEventListener("load", next, {once:true}); i.addEventListener("error", next, {once:true}); i.loading = "eager"; }
+      next(); next(); next();
+    }
+    function start(){ (window.requestIdleCallback || setTimeout)(go, {timeout:1500}); }
+    if (document.readyState === "complete") start(); else window.addEventListener("load", start);
+  })();
+  // Placeholder: al cargar la imagen se quita el fondo borroso
+  document.querySelectorAll("img[srcset]").forEach(function(i){
+    function clr(){ i.style.backgroundImage = "none"; } if (i.complete) clr(); else i.addEventListener("load", clr, {once:true}); });
   // Video del dron: solo corre cuando está en pantalla
   (function(){
     var d = document.querySelector("video[autoplay]"); if (!d || !("IntersectionObserver" in window)) return;
