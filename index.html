@@ -646,6 +646,12 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
 @media (max-width:900px){ .two-way{grid-template-columns:1fr} }
 @media (max-width:420px){ .pt-units div{min-width:56px} .pt-units b{font-size:27px} }
 
+/* Botón fijo: latido lento, sin temporizador */
+.sticky-cta .btn{justify-content:center}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.045)}24%{transform:scale(1)}36%{transform:scale(1.03)}50%{transform:scale(1)}}
+.heartbeat{animation:heartbeat 2.8s ease-in-out infinite;transform-origin:center}
+@media (prefers-reduced-motion:reduce){.heartbeat{animation:none}}
+
 </style>
 </head>
 <body>
@@ -1190,7 +1196,7 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
   </div>
 </footer>
 
-<div class="sticky-cta"><a href="#registro" class="btn btn-gold pulse"><span>Reservar mi visita</span><span class="sticky-timer">⏳</span></a></div>
+<div class="sticky-cta"><a href="#registro" class="btn btn-gold heartbeat">Reservar mi visita del 28</a></div>
 
 <script>
 (function(){
