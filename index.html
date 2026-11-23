@@ -617,6 +617,35 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
   .fireflies{display:none}
 }
 
+/* v6: temporizador de promoción, pasos y bloques de viaje */
+.promo-timer{margin:22px auto 0;max-width:620px;background:linear-gradient(135deg,#3A0B07,#7A1A0E 55%,#B8360F);color:#fff;border-radius:20px;padding:16px 18px;text-align:center;border:2px solid var(--neon-orange,#FF9A1F);box-shadow:0 0 22px rgba(255,154,31,.45);position:relative;overflow:hidden}
+.promo-timer::after{content:"";position:absolute;top:0;bottom:0;left:0;width:35%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmer 4s ease-in-out infinite;pointer-events:none}
+.pt-label{display:block;font-weight:800;font-size:14px;letter-spacing:.4px;text-transform:uppercase;color:#FFE7A8}
+.pt-units{display:flex;justify-content:center;gap:10px;margin:10px 0 8px}
+.pt-units div{background:rgba(0,0,0,.35);border-radius:12px;min-width:64px;padding:6px 6px 4px;box-shadow:inset 0 0 0 1px rgba(255,216,107,.4)}
+.pt-units b{display:block;font-family:Anton;font-weight:400;font-size:32px;line-height:1.05;color:#FFD86B;text-shadow:0 0 12px rgba(255,154,31,.8);animation:glowpulse 1s ease-in-out infinite}
+.pt-units small{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:#FFE7C2}
+.pt-after{display:block;font-size:13px;font-weight:600;color:#FFE1C9}
+.reg .promo-timer{margin-left:0}
+.steps-title{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:24px;color:var(--gold-2);margin-top:20px}
+.reg .why li{align-items:flex-start}
+.reg .why li div{color:#E3EFE8}
+.reg .why li b{color:#fff}
+.two-way{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.tw{border-radius:22px;padding:22px;color:#fff;position:relative;overflow:hidden}
+.tw-travel{background:linear-gradient(135deg,var(--green-deep),var(--green));border:2px solid var(--gold)}
+.tw-local{background:linear-gradient(135deg,#8A3B07,var(--orange));border:2px solid #FFD86B}
+.tw-ic{font-size:30px}
+.tw h3{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:26px;margin:6px 0}
+.tw p{color:#F3F7F4}
+.tw b{color:#FFE7A8}
+select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--green) 50%),linear-gradient(135deg,var(--green) 50%,transparent 50%) !important;background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50% !important;background-size:6px 6px,6px 6px !important;background-repeat:no-repeat !important;padding-right:40px !important;cursor:pointer}
+.field select:invalid,.field select option[value=""]{color:#8a948f}
+.sticky-cta .btn{display:flex;justify-content:space-between;gap:10px}
+.sticky-timer{background:rgba(7,43,31,.9);color:#FFD86B;border-radius:99px;padding:4px 10px;font-size:13px;font-variant-numeric:tabular-nums}
+@media (max-width:900px){ .two-way{grid-template-columns:1fr} }
+@media (max-width:420px){ .pt-units div{min-width:56px} .pt-units b{font-size:27px} }
+
 </style>
 </head>
 <body>
@@ -655,8 +684,8 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
       </div>
     </div>
     <div class="price-row">
-      <div class="led slow pill"><small>Hectárea · 10,000 m²</small><b>S/ 69,000</b><span>S/ 6.90 el m² · al contado</span></div>
-      <div class="led slow pill"><small>Lote · 1,000 m²</small><b>S/ 14,900</b><span>hasta 15 cuotas sin intereses</span></div>
+      <div class="led slow pill"><small>Hectárea · 10,000 m²</small><b>S/ 69,000</b><span>S/ 6.90 el m² · al contado · solo hasta el 28</span></div>
+      <div class="led slow pill"><small>Lote · 1,000 m²</small><b>S/ 14,900</b><span>al contado · solo hasta el 28</span></div>
     </div>
     <div class="cta-row">
       <a href="#registro" class="btn btn-gold pulse">Reservar mi visita del 28</a>
@@ -668,7 +697,7 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
 </section>
 <div class="count">
   <div class="wrap">
-    <p>El gran lanzamiento empieza en</p>
+    <p>⏳ La promoción de lanzamiento termina en</p>
     <div class="units" aria-live="polite">
       <div class="unit"><b data-d>--</b><small>días</small></div>
       <div class="unit"><b data-h>--</b><small>horas</small></div>
@@ -688,16 +717,20 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     <div class="center reveal">
       <span class="kicker">Te esperamos</span>
       <h2>Nos encontramos en Pucallpa <em>el 28 de noviembre</em></h2>
-      <p class="sub">Reserva tu visita, dinos con quiénes vienes y nosotros te escribimos con la hora y el punto de encuentro.</p>
+      <p class="sub">Regístrate, te llevamos al WhatsApp de un asesor y él coordina contigo la hora y el punto de encuentro.</p>
     </div>
     <div class="enc-grid">
     <figure class="reel reveal enc-video"><video src="img/vid/evento_giuseppe.mp4" poster="img/vid/evento_giuseppe.jpg" preload="none" playsinline controls></video><figcaption><b>¿Qué vamos a vivir el 28?</b>Show en vivo, comida típica, barra libre, regalos y el sorteo del auto 0 km</figcaption></figure>
     <div class="agenda">
-      <div class="step reveal"><span class="num">1</span><div><h3>Te registras aquí</h3><p>Nombre, desde dónde vienes y con quiénes irás. Toma 1 minuto.</p></div></div>
-      <div class="step reveal"><span class="num">2</span><div><h3>Confirmamos por WhatsApp</h3><p>Un asesor te escribe con la hora y el punto de encuentro en Pucallpa.</p></div></div>
+      <div class="step reveal"><span class="num">1</span><div><h3>Te registras aquí</h3><p>Tu nombre, desde dónde vienes y cuántas personas vienen. Toma 1 minuto.</p></div></div>
+      <div class="step reveal"><span class="num">2</span><div><h3>Hablas con un asesor</h3><p>Te llevamos a su WhatsApp con tu registro escrito y él coordina tu visita.</p></div></div>
       <div class="step reveal"><span class="num">3</span><div><h3>Vamos juntos al KM 44</h3><p>Recorres las hectáreas, la quebrada natural y las calles que ya se están abriendo.</p></div></div>
       <div class="step reveal"><span class="num">4</span><div><h3>Celebramos el lanzamiento</h3><p>Show en vivo, barra libre, precios de lanzamiento y separación con S/ 2,500.</p></div></div>
     </div>
+    </div>
+    <div class="two-way">
+      <div class="tw reveal tw-travel"><span class="tw-ic">🚌✈️</span><h3>¿Vienes de provincia?</h3><p>Si separas tu hectárea o tu lote con <b>S/ 2,500</b>, <b>te cubrimos el pasaje de ida y vuelta</b> hasta el proyecto.</p></div>
+      <div class="tw reveal tw-local"><span class="tw-ic">📍</span><h3>¿Ya estás en Pucallpa?</h3><p><b>Ven y acompáñanos este 28 de noviembre</b> y aprovecha esta gran oportunidad. Estamos a 25 minutos de la ciudad.</p></div>
     </div>
     <div class="center reveal" style="margin-top:28px"><a href="#registro" class="btn btn-gold pulse">Reservar mi visita del 28</a></div>
   </div>
@@ -855,7 +888,8 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     <div class="center reveal">
       <span class="kicker">Dos formas de tener tu tierra</span>
       <h2>Elige tu <span class="gold-text">hectárea</span> o tu lote</h2>
-      <p class="sub">Precios de prelanzamiento, vigentes hasta el 28 de noviembre.</p>
+      <p class="sub">Precios de lanzamiento al contado, solo hasta el 28 de noviembre.</p>
+      <div class="promo-timer"><span class="pt-label">⏳ El precio de lanzamiento termina en</span><div class="pt-units"><div><b class="t-d">--</b><small>días</small></div><div><b class="t-h">--</b><small>horas</small></div><div><b class="t-m">--</b><small>min</small></div><div><b class="t-s">--</b><small>seg</small></div></div><span class="pt-after">Después del 28 de noviembre, las hectáreas y los lotes suben de precio.</span></div>
     </div>
     <div class="offers">
       <article class="led offer star reveal">
@@ -865,18 +899,18 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
         <div class="price">Desde<strong>S/ 69,000</strong>Solo S/ 6.90 el m²</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Pago al contado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Espacio para cultivos, crianza o turismo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Separa con S/ 2,500</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Entrega inmediata del terreno</li>
         </ul>
       </article>
       <article class="led slow offer reveal">
-        <span class="ribbon" style="background:var(--green-2)">Con cuotas</span>
+        <span class="ribbon" style="background:var(--green-2)">Precio de lanzamiento</span>
         <h3>Lote de 1,000 m²</h3>
         <div class="area">Tu chacra o casa de campo</div>
-        <div class="price">Desde<strong>S/ 14,900</strong>Paga en partes, sin intereses</div>
+        <div class="price">Desde<strong>S/ 14,900</strong>Al contado · precio de lanzamiento</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>30 % de inicial</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Hasta 15 cuotas sin intereses</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Pago al contado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Separa con S/ 2,500</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Entrega inmediata del terreno</li>
         </ul>
       </article>
@@ -996,9 +1030,9 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
       <img src="img/pdf/buses.jpg" alt="Empresas de bus que llegan a Pucallpa: Movil Bus, Transmar, NorPerú y Real Chancas" loading="lazy">
       <div>
         <span class="kicker">¿Vienes de Lima u otra región?</span>
-        <h3 class="anton">Llega a Pucallpa <span class="gold-text">en bus o en avión</span></h3>
-        <p>Movil Bus, Transmar, NorPerú y Real Chancas tienen salidas a Pucallpa, y también hay vuelos desde Lima. Cuéntanos desde dónde vienes en el registro y te ayudamos a coordinar tu llegada.</p>
-        <p><b>Pregunta a tu asesor por el viaje todo pagado del lanzamiento</b> (cupos limitados, sujeto a condiciones).</p>
+        <h3 class="anton">Tu pasaje <span class="gold-text">ida y vuelta, cubierto</span></h3>
+        <p>Movil Bus, Transmar, NorPerú y Real Chancas tienen salidas a Pucallpa, y también hay vuelos desde Lima. Cuéntanos desde dónde vienes en el registro y tu asesor coordina tu llegada.</p>
+        <p><b>Si separas con S/ 2,500, te cubrimos el pasaje de ida y vuelta hasta el proyecto.</b> Tu asesor coordina contigo las fechas.</p>
         <a href="#registro" class="btn btn-gold">Reservar mi visita</a>
       </div>
     </div>
@@ -1010,12 +1044,15 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     <div class="reveal">
       <span class="kicker">Registro gratuito</span>
       <h2>Nos vemos en Pucallpa el <span class="gold-text">28 de noviembre</span></h2>
-      <p style="color:#d2e6da;font-size:17px">Los cupos son limitados. Reservamos el ingreso para quienes de verdad quieren conocer el terreno, así que te pedimos unos datos rápidos.</p>
+      <p style="color:#d2e6da;font-size:17px">Los cupos son limitados. Reservamos el ingreso para quienes de verdad quieren conocer el terreno.</p>
+      <h3 class="steps-title">Así funciona tu registro</h3>
       <ul class="why">
-        <li><span>1</span>Llena tus datos en 1 minuto.</li>
-        <li><span>2</span>Confirma tu registro por WhatsApp.</li>
-        <li><span>3</span>Te enviamos la hora y el punto de encuentro para el 28.</li>
+        <li><span>1</span><div><b>Llenas tus datos</b> en este formulario. Toma 1 minuto.</div></li>
+        <li><span>2</span><div><b>Te llevamos al WhatsApp de un asesor</b> con tu registro ya escrito. Solo tocas enviar.</div></li>
+        <li><span>3</span><div><b>El asesor coordina tu visita</b>: la hora, el punto de encuentro y, si vienes de provincia y separas, tu pasaje.</div></li>
+        <li><span>4</span><div><b>Te esperamos el 28 de noviembre</b> en El Encanto de Pucallpa.</div></li>
       </ul>
+      <div class="promo-timer"><span class="pt-label">⏳ El precio de lanzamiento termina en</span><div class="pt-units"><div><b class="t-d">--</b><small>días</small></div><div><b class="t-h">--</b><small>horas</small></div><div><b class="t-m">--</b><small>min</small></div><div><b class="t-s">--</b><small>seg</small></div></div><span class="pt-after">Después del 28 de noviembre, las hectáreas y los lotes suben de precio.</span></div>
       <div class="seats">
         <div style="display:flex;justify-content:space-between;font-weight:700;font-size:14px"><span>Cupos para el lanzamiento</span><span style="color:var(--gold-2)">Se están llenando</span></div>
         <div class="bar"><i></i></div>
@@ -1025,24 +1062,24 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     <div class="led form reveal" id="formBox">
       <form id="regForm" novalidate>
         <h3>Reserva tu visita del 28</h3>
-        <p class="hint">Todos los campos son obligatorios.</p>
+        <p class="hint">Todos los campos son obligatorios. En las listas, toca y elige una opción.</p>
 
         <div class="field" data-f="nombre">
-          <label for="nombre">Nombre completo</label>
+          <label for="nombre">Nombre y apellidos</label>
           <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej.: Rosa Pérez Ramírez">
           <div class="err">Escribe tu nombre y tu apellido.</div>
         </div>
 
         <div class="field" data-f="cel">
           <label for="cel">Celular (WhatsApp)</label>
-          <input id="cel" name="cel" type="tel" inputmode="numeric" autocomplete="tel" placeholder="9XX XXX XXX" maxlength="11">
+          <input id="cel" name="cel" type="tel" inputmode="numeric" autocomplete="tel" placeholder="Ej.: 987654321" maxlength="11">
           <div class="err">Escribe un celular de 9 dígitos que empiece con 9.</div>
         </div>
 
         <div class="field" data-f="region">
           <label for="region">¿Desde qué parte del Perú vendrás?</label>
           <select id="region" name="region">
-            <option value="">Elige tu región</option>
+            <option value="">Elige (Ej.: Ucayali)</option>
             <option>Ucayali</option><option>Lima</option><option>Huánuco</option><option>Junín</option><option>San Martín</option><option>Loreto</option><option>Pasco</option><option>Callao</option><option>Arequipa</option><option>La Libertad</option><option>Lambayeque</option><option>Piura</option><option>Cajamarca</option><option>Áncash</option><option>Ica</option><option>Cusco</option><option>Ayacucho</option><option>Huancavelica</option><option>Apurímac</option><option>Puno</option><option>Tacna</option><option>Moquegua</option><option>Madre de Dios</option><option>Amazonas</option><option>Tumbes</option><option>Vivo fuera del Perú</option>
           </select>
           <div class="err">Elige tu región.</div>
@@ -1050,84 +1087,61 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
 
         <div class="field" data-f="ciudad">
           <label for="ciudad">Ciudad o distrito</label>
-          <input id="ciudad" name="ciudad" type="text" placeholder="Ej.: Yarinacocha, Tingo María, San Juan de Lurigancho">
+          <input id="ciudad" name="ciudad" type="text" placeholder="Ej.: Yarinacocha">
           <div class="err">Escribe tu ciudad o distrito.</div>
         </div>
 
-        <fieldset class="field" data-f="para">
-          <legend>¿Para qué quieres tu hectárea? <span style="font-weight:600;color:var(--muted)">(puedes marcar varias)</span></legend>
-          <div class="opts">
-            <label class="opt"><input type="checkbox" name="para" value="Sembrar (cacao, frutales, plátano)"><span>🌱 Sembrar</span></label>
-            <label class="opt"><input type="checkbox" name="para" value="Piscigranja o crianza de animales"><span>🐟 Piscigranja o crianza</span></label>
-            <label class="opt"><input type="checkbox" name="para" value="Negocio de turismo (bungalows)"><span>🏡 Turismo y bungalows</span></label>
-            <label class="opt"><input type="checkbox" name="para" value="Casa de campo para mi familia"><span>👨‍👩‍👧 Casa de campo</span></label>
-            <label class="opt"><input type="checkbox" name="para" value="Inversión y patrimonio"><span>📈 Inversión y patrimonio</span></label>
-            <label class="opt"><input type="checkbox" name="para" value="Aún lo estoy pensando"><span>🤔 Aún lo pienso</span></label>
-          </div>
-          <div class="err">Marca al menos una opción.</div>
-        </fieldset>
-
-        <fieldset class="field" data-f="interes">
-          <legend>¿Qué te gustaría tener?</legend>
-          <div class="opts">
-            <label class="opt"><input type="radio" name="interes" value="Hectárea (10,000 m²) al contado"><span>Hectárea<br>10,000 m²</span></label>
-            <label class="opt"><input type="radio" name="interes" value="Lote de 1,000 m² con cuotas"><span>Lote<br>1,000 m²</span></label>
-            <label class="opt"><input type="radio" name="interes" value="Aún no decido entre hectárea y lote"><span>Aún no<br>decido</span></label>
-          </div>
+        <div class="field" data-f="para">
+          <label for="para">¿Para qué quieres tu tierra?</label>
+          <select id="para" name="para">
+            <option value="">Elige (Ej.: Sembrar)</option>
+            <option>Sembrar (cacao, frutales, plátano)</option>
+            <option>Piscigranja o crianza de animales</option>
+            <option>Negocio de turismo (bungalows)</option>
+            <option>Casa de campo para mi familia</option>
+            <option>Inversión y patrimonio</option>
+            <option>Aún lo estoy pensando</option>
+          </select>
           <div class="err">Elige una opción.</div>
-        </fieldset>
+        </div>
 
-        <fieldset class="field" data-f="cuando">
-          <legend>¿Cuándo piensas comprar?</legend>
-          <div class="opts">
-            <label class="opt"><input type="radio" name="cuando" value="En el lanzamiento (28 de noviembre)"><span>En el<br>lanzamiento</span></label>
-            <label class="opt"><input type="radio" name="cuando" value="En los próximos 3 meses"><span>En los próximos<br>3 meses</span></label>
-            <label class="opt"><input type="radio" name="cuando" value="Primero quiero conocer"><span>Primero quiero<br>conocer</span></label>
-          </div>
+        <div class="field" data-f="interes">
+          <label for="interes">¿Qué te gustaría tener?</label>
+          <select id="interes" name="interes">
+            <option value="">Elige (Ej.: Hectárea)</option>
+            <option>Hectárea (10,000 m²) desde S/ 69,000</option>
+            <option>Lote de 1,000 m² desde S/ 14,900</option>
+            <option>Aún no decido entre hectárea y lote</option>
+          </select>
           <div class="err">Elige una opción.</div>
-        </fieldset>
+        </div>
 
-        <fieldset class="field" data-f="personas">
-          <legend>¿Cuántas personas vienen contigo (incluyéndote)?</legend>
-          <div class="opts">
-            <label class="opt"><input type="radio" name="personas" value="1"><span>Solo yo</span></label>
-            <label class="opt"><input type="radio" name="personas" value="2"><span>2 personas</span></label>
-            <label class="opt"><input type="radio" name="personas" value="3 a 4"><span>3 a 4</span></label>
-          </div>
+        <div class="field" data-f="personas">
+          <label for="personas">¿Cuántas personas vienen, contándote a ti?</label>
+          <select id="personas" name="personas">
+            <option value="">Elige (Ej.: 2 personas)</option>
+            <option>Solo yo</option>
+            <option>2 personas</option>
+            <option>3 personas</option>
+            <option>4 personas</option>
+            <option>5 o más personas</option>
+          </select>
           <div class="err">Elige una opción.</div>
-        </fieldset>
-
-        <fieldset class="field" data-f="quienes">
-          <legend>¿Con quiénes irás?</legend>
-          <div class="opts">
-            <label class="opt"><input type="radio" name="quienes" value="Voy solo/a"><span>Voy solo/a</span></label>
-            <label class="opt"><input type="radio" name="quienes" value="Con mi pareja"><span>Con mi pareja</span></label>
-            <label class="opt"><input type="radio" name="quienes" value="Con mi familia"><span>Con mi familia</span></label>
-            <label class="opt"><input type="radio" name="quienes" value="Con amigos"><span>Con amigos</span></label>
-            <label class="opt"><input type="radio" name="quienes" value="Con mi socio/a de inversión"><span>Con mi socio/a</span></label>
-            <label class="opt"><input type="radio" name="quienes" value="Con mis hijos"><span>Con mis hijos</span></label>
-          </div>
-          <div class="err">Elige con quiénes irás.</div>
-        </fieldset>
-
-        <div class="field" data-f="acomp">
-          <label for="acomp">Nombres de tus acompañantes <span style="font-weight:600;color:var(--muted)">(opcional)</span></label>
-          <input id="acomp" type="text" placeholder="Ej.: Juan Pérez (esposo), Ana Pérez (hija)">
         </div>
 
         <div class="field" data-f="ok" style="margin-bottom:0">
-          <label class="check"><input type="checkbox" id="ok"> Confirmo que quiero asistir al gran lanzamiento del 28 de noviembre y acepto que Infinity Group me escriba por WhatsApp sobre el evento.</label>
+          <label class="check"><input type="checkbox" id="ok"> Confirmo que quiero asistir al gran lanzamiento del 28 de noviembre y acepto que un asesor de Infinity Group me escriba por WhatsApp para coordinar mi visita.</label>
           <div class="err" style="margin:-10px 0 14px">Marca la casilla para confirmar tu asistencia.</div>
         </div>
 
         <button type="submit" class="btn btn-gold">Acepto la invitación</button>
-        <p class="privacy">Al tocar el botón se abre WhatsApp con tu registro: solo envía el mensaje. Tus datos solo se usan para el evento.</p>
+        <p class="privacy">Al tocar el botón te llevamos al WhatsApp de un asesor con tu registro ya escrito: solo envía el mensaje. Tus datos solo se usan para coordinar tu visita.</p>
       </form>
 
       <div class="done" id="done">
         <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></div>
         <h3 style="font-family:Anton;font-weight:400;text-transform:uppercase;font-size:30px;color:var(--green)">¡Falta un paso!</h3>
-        <p><b id="doneName"></b>, para confirmar tu cupo <b>envía el mensaje de WhatsApp</b> que se abrió. Si no se abrió, toca aquí:</p>
+        <p><b id="doneName"></b>, te estamos llevando al WhatsApp de un asesor. <b>Envía el mensaje</b> para confirmar tu cupo y coordinar tu visita. Si no se abrió, toca aquí:</p>
         <a id="wspLink" class="btn btn-wsp" href="#" target="_blank" rel="noopener">Enviar mi registro por WhatsApp</a>
       </div>
     </div>
@@ -1143,19 +1157,22 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
       <details class="reveal"><summary>¿El registro tiene algún costo?</summary><p>No. Registrarte y asistir al gran lanzamiento es gratis. Solo te pedimos confirmar por WhatsApp porque los cupos son limitados.</p></details>
       <details class="reveal"><summary>¿Dónde es el lanzamiento y a qué hora?</summary><p>El 28 de noviembre en El Encanto de Pucallpa, KM 44 de la Carretera Federico Basadre (sector Santa Catalina, Campo Verde). Cuando confirmes tu registro te enviamos por WhatsApp la hora y el punto de encuentro.</p></details>
       <details class="reveal"><summary>¿El terreno tiene documentos?</summary><p>Sí. El terreno está inscrito en Registros Públicos con la partida registral N° 11008305 a favor de Infinity Group MB S.A.C. Los contratos se firman en notaría. En el lanzamiento puedes revisar toda la documentación.</p></details>
-      <details class="reveal"><summary>¿Puedo pagar en cuotas?</summary><p>Los lotes de 1,000 m² se pueden pagar con 30 % de inicial y hasta 15 cuotas sin intereses. La hectárea se paga al contado. En los dos casos puedes separar con S/ 2,500.</p></details>
+      <details class="reveal"><summary>¿Cómo es el pago?</summary><p>Todo es al contado: no hay financiamiento. Los precios de lanzamiento (hectárea desde S/ 69,000 y lote de 1,000 m² desde S/ 14,900) son al contado. Son una promoción que solo dura hasta el 28 de noviembre; después, las hectáreas y los lotes suben de precio. Puedes separar con S/ 2,500.</p></details>
+      <details class="reveal"><summary>¿Qué pasa después de registrarme?</summary><p>Al tocar "Acepto la invitación" te llevamos al WhatsApp de un asesor con tu registro ya escrito. Solo envías el mensaje y el asesor coordina contigo la hora, el punto de encuentro y, si vienes de provincia y separas, tu pasaje.</p></details>
+      <details class="reveal"><summary>Vengo de provincia, ¿me pagan el pasaje?</summary><p>Sí. Si separas tu hectárea o tu lote con S/ 2,500, te cubrimos el pasaje de ida y vuelta hasta el proyecto. Tu asesor coordina contigo las fechas y el medio de transporte.</p></details>
+      <details class="reveal"><summary>Ya vivo en Pucallpa, ¿puedo ir?</summary><p>¡Claro! Ven y acompáñanos este 28 de noviembre y aprovecha esta gran oportunidad. Regístrate aquí y el asesor te confirma la hora y el punto de encuentro. El proyecto está a 25 minutos de la ciudad.</p></details>
       <details class="reveal"><summary>¿Cuándo me entregan el terreno?</summary><p>La entrega del terreno es inmediata. Los plazos del título y las condiciones exactas figuran en tu contrato; nuestro equipo te los explica en el lanzamiento.</p></details>
       <details class="reveal"><summary>¿Cómo participo en el sorteo del auto?</summary><p>Participan quienes compren su hectárea o su lote. El sorteo del auto 0 km es el 20 de diciembre. Te damos las bases completas en el lanzamiento.</p></details>
       <details class="reveal"><summary>¿Qué tan grande es una hectárea?</summary><p>Una hectárea mide 10,000 m², más o menos lo que ocupan 50 lotes de 200 m² o una cancha y media de fútbol. Alcanza para tener cultivos, una piscigranja y tu casa de campo en el mismo terreno.</p></details>
       <details class="reveal"><summary>¿Qué puedo hacer en mi hectárea?</summary><p>Sembrar cacao, plátano, papaya, yuca y frutales; tener una piscigranja de paco; criar gallinas; armar un negocio de turismo con bungalows o hacer tu casa de campo. Las imágenes de esta página son referenciales: muestran ideas de lo que puedes construir.</p></details>
       <details class="reveal"><summary>Vengo de otra región, ¿igual puedo ir?</summary><p>Sí. En el registro cuéntanos desde dónde vienes y nuestro equipo te escribe por WhatsApp para coordinar tu llegada a Pucallpa y el punto de encuentro.</p></details>
-      <details class="reveal"><summary>¿Tengo que comprar el día del lanzamiento?</summary><p>No. Puedes ir solo a conocer. Si decides separar tu hectárea o tu lote ese día, lo haces con S/ 2,500 y aprovechas el precio de lanzamiento.</p></details>
-      <details class="reveal"><summary>¿Puedo ir con mi familia?</summary><p>Sí. En el formulario indica cuántas personas vienen contigo para reservar sus lugares.</p></details>
+      <details class="reveal"><summary>¿Tengo que comprar el día del lanzamiento?</summary><p>No. Puedes ir solo a conocer. Pero el precio de lanzamiento al contado solo dura hasta el 28 de noviembre: si decides separar ese día, lo haces con S/ 2,500 y aseguras ese precio.</p></details>
+      <details class="reveal"><summary>¿Puedo ir con mi familia?</summary><p>Sí. En el formulario indica cuántas personas vienen, contándote a ti, para reservar sus lugares.</p></details>
       <details class="reveal"><summary>¿Puedo visitar el terreno antes del 28?</summary><p>Escríbenos por WhatsApp y coordinamos una visita con un asesor según la disponibilidad del equipo.</p></details>
-      <details class="reveal"><summary>¿Qué pasa con el precio después del lanzamiento?</summary><p>El precio de S/ 6.90 el m² es de prelanzamiento y está vigente hasta el 28 de noviembre. Después sube.</p></details>
+      <details class="reveal"><summary>¿Qué pasa con el precio después del lanzamiento?</summary><p>Los precios de lanzamiento (S/ 6.90 el m² en hectáreas y desde S/ 14,900 el lote de 1,000 m²) son al contado y solo hasta el 28 de noviembre. Después, las hectáreas y los lotes suben de precio.</p></details>
       <details class="reveal"><summary>¿A cuánto está de la ciudad de Pucallpa?</summary><p>A unos 25 minutos de la ciudad de Pucallpa, a 2 minutos del KM 44 de la Carretera Federico Basadre (sector Santa Catalina, Campo Verde). En la sección "Ubicación" tienes el mapa y el botón para abrirlo en Google Maps o Waze.</p></details>
       <details class="reveal"><summary>¿A qué cuenta debo pagar mi separación?</summary><p>Solo a las cuentas corrientes del BCP a nombre de INFINITY GROUP MB S.A.C. (RUC 20615486281). Las ves en la sección "Seguridad". Nunca deposites a cuentas personales y pide siempre tu comprobante.</p></details>
-      <details class="reveal"><summary>¿Cómo llego a Pucallpa si vivo en Lima u otra región?</summary><p>En bus (Movil Bus, Transmar, NorPerú, Real Chancas, entre otras) o en avión. Indícanos desde dónde vienes y te ayudamos a coordinar. Pregunta también por el viaje todo pagado del lanzamiento (cupos limitados, sujeto a condiciones).</p></details>
+      <details class="reveal"><summary>¿Cómo llego a Pucallpa si vivo en Lima u otra región?</summary><p>En bus (Movil Bus, Transmar, NorPerú, Real Chancas, entre otras) o en avión. Si separas con S/ 2,500, te cubrimos el pasaje de ida y vuelta hasta el proyecto. Indícanos desde dónde vienes en el registro y tu asesor lo coordina.</p></details>
       <details class="reveal"><summary>¿Ya hay personas que compraron?</summary><p>Sí. En el foro de inversionistas de noviembre varias familias separaron su hectárea o su lote. En esta página puedes ver sus testimonios y el plano con parcelas separadas y vendidas.</p></details>
       <details class="reveal"><summary>¿Cuántas hectáreas hay disponibles?</summary><p>El plano de hectáreas muestra 22 parcelas de 10,000 m², y los planos de lotes de 1,000 m² muestran la primera y la segunda etapa. Algunas ya están separadas o vendidas: pregunta por la disponibilidad del día.</p></details>
       <details class="reveal"><summary>¿Quién está detrás del proyecto?</summary><p>Infinity Group MB S.A.C. (RUC 20615486281), dirigida por Magaly Bermúdez, con más de 7,000 lotes vendidos en proyectos como Palacio Verde (Huaral) y KM 98 y KM 101 en Chancay.</p></details>
@@ -1169,11 +1186,11 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     <div class="foot-logos"><img src="img/logo_infinity_t.png" alt="Infinity Group MB"><img src="img/logo_encanto_t.png" alt="El Encanto de Pucallpa"></div>
     <div><b style="color:#fff">Infinity Group MB S.A.C.</b> · RUC 20615486281 · El Encanto de Pucallpa, KM 44 Carretera Federico Basadre, sector Santa Catalina, Campo Verde, Ucayali.</div>
     <div>WhatsApp: <a href="https://wa.me/51925375153">+51 925 375 153</a></div>
-    <p class="legal">Precios de prelanzamiento en soles, sujetos a disponibilidad y vigentes hasta el 28 de noviembre de 2026. La hectárea se vende al contado; el financiamiento aplica solo a lotes de 1,000 m². Las ideas de uso y las imágenes de bungalows son referenciales. El sorteo se rige por sus bases. Tus datos se usan solo para coordinar tu asistencia al evento y no se comparten con terceros.</p>
+    <p class="legal">Precios de prelanzamiento en soles, sujetos a disponibilidad y vigentes hasta el 28 de noviembre de 2026. Precios de lanzamiento al contado. El pasaje de ida y vuelta se cubre a quienes vienen de provincia y separan con S/ 2,500, según coordinación con su asesor. Las ideas de uso y las imágenes de bungalows son referenciales. El sorteo se rige por sus bases. Tus datos se usan solo para coordinar tu asistencia al evento y no se comparten con terceros.</p>
   </div>
 </footer>
 
-<div class="sticky-cta"><a href="#registro" class="btn btn-gold pulse">Reservar mi visita del 28 NOV</a></div>
+<div class="sticky-cta"><a href="#registro" class="btn btn-gold pulse"><span>Reservar mi visita</span><span class="sticky-timer">⏳</span></a></div>
 
 <script>
 (function(){
@@ -1187,6 +1204,11 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     var d = Math.floor(t/864e5), h = Math.floor(t%864e5/36e5), m = Math.floor(t%36e5/6e4), s = Math.floor(t%6e4/1e3);
     q("[data-d]").textContent = pad(d); q("[data-h]").textContent = pad(h);
     q("[data-m]").textContent = pad(m); q("[data-s]").textContent = pad(s);
+    document.querySelectorAll(".t-d").forEach(function(e){e.textContent=pad(d)});
+    document.querySelectorAll(".t-h").forEach(function(e){e.textContent=pad(h)});
+    document.querySelectorAll(".t-m").forEach(function(e){e.textContent=pad(m)});
+    document.querySelectorAll(".t-s").forEach(function(e){e.textContent=pad(s)});
+    var sc2 = q(".sticky-timer"); if (sc2) sc2.textContent = t > 0 ? ("⏳ " + d + "d " + pad(h) + ":" + pad(m) + ":" + pad(s)) : "¡Es hoy!";
     q("[data-left]").textContent = t > 0 ? ("Faltan " + d + (d===1?" día":" días") + " y " + h + " h") : "¡Hoy es el lanzamiento!";
   }
   tick(); setInterval(tick, 1000);
@@ -1252,17 +1274,15 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     var cel = q("#cel").value.trim();
     var region = q("#region").value;
     var ciudad = q("#ciudad").value.trim();
-    var para = [].map.call(f.querySelectorAll('input[name="para"]:checked'), function(i){ return i.value; });
+    var para = q("#para").value, interes = q("#interes").value, personas = q("#personas").value;
     var v = {
       nombre: nombre.split(" ").length < 2 || nombre.length < 5,
       cel: !/^9\d{8}$/.test(cel),
       region: !region,
       ciudad: ciudad.length < 3,
-      para: para.length === 0,
-      interes: !radio("interes"),
-      cuando: !radio("cuando"),
-      personas: !radio("personas"),
-      quienes: !radio("quienes"),
+      para: !para,
+      interes: !interes,
+      personas: !personas,
       ok: !q("#ok").checked
     };
     var first = null;
@@ -1275,11 +1295,9 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
       "👤 Nombre: " + nombre + "\n" +
       "📱 Celular: " + cel + "\n" +
       "📍 Vengo desde: " + ciudad + ", " + region + "\n" +
-      "🎯 Quiero mi tierra para: " + para.join(", ") + "\n" +
-      "🏞️ Me interesa: " + radio("interes") + "\n" +
-      "🗓️ Pienso comprar: " + radio("cuando") + "\n" +
-      "👥 Personas que vienen: " + radio("personas") + " (" + radio("quienes") + ")\n" +
-      (q("#acomp").value.trim() ? "🧑‍🤝‍🧑 Acompañantes: " + q("#acomp").value.trim() + "\n" : "") + "\n" +
+      "🎯 Quiero mi tierra para: " + para + "\n" +
+      "🏞️ Me interesa: " + interes + "\n" +
+      "👥 Personas que vienen: " + personas + "\n\n" +
       "Quedo atento(a) a la confirmación, la hora y el punto de encuentro. ¡Gracias!";
     var url = "https://wa.me/" + WSP + "?text=" + encodeURIComponent(msg);
     q("#wspLink").href = url;
