@@ -1168,8 +1168,9 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
     Object.keys(v).forEach(function(k){ mark(k, v[k]); if(v[k] && !first) first = k; });
     if (first){ q('[data-f="'+first+'"]').scrollIntoView({behavior:"smooth",block:"center"}); return; }
 
-    var msg = "¡Hola! ACEPTO LA INVITACIÓN al Gran Lanzamiento de El Encanto de Pucallpa este 28 de noviembre. ✅\n" +
-      "Sí quiero ir a conocer el proyecto en el KM 44.\n\n" +
+    var msg = "¡Hola! ✅ YA ME REGISTRÉ al Gran Lanzamiento de El Encanto de Pucallpa del 28 de noviembre.\n" +
+      "Por favor, sepárenme mi espacio: quiero ir a visitar el proyecto en el KM 44.\n\n" +
+      "📝 MIS DATOS:\n" +
       "👤 Nombre: " + nombre + "\n" +
       "📱 Celular: " + cel + "\n" +
       "📍 Vengo desde: " + ciudad + ", " + region + "\n" +
@@ -1178,14 +1179,16 @@ blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:800;
       "🗓️ Pienso comprar: " + radio("cuando") + "\n" +
       "👥 Personas que vienen: " + radio("personas") + " (" + radio("quienes") + ")\n" +
       (q("#acomp").value.trim() ? "🧑‍🤝‍🧑 Acompañantes: " + q("#acomp").value.trim() + "\n" : "") + "\n" +
-      "¿Me envían la hora y el punto de encuentro?";
+      "Quedo atento(a) a la confirmación, la hora y el punto de encuentro. ¡Gracias!";
     var url = "https://wa.me/" + WSP + "?text=" + encodeURIComponent(msg);
     q("#wspLink").href = url;
     q("#doneName").textContent = nombre.split(" ")[0];
     f.style.display = "none"; q("#done").style.display = "block";
     q("#formBox").scrollIntoView({behavior:"smooth",block:"center"});
     if (window.fbq) { try { fbq("track","CompleteRegistration"); } catch(_){} }
-    window.open(url, "_blank");
+    // Abrir WhatsApp en la misma pestaña (funciona dentro de Facebook/Instagram);
+    // si el navegador no lo abre, queda el botón verde "Enviar mi registro por WhatsApp".
+    setTimeout(function(){ window.location.href = url; }, 600);
   });
 })();
 </script>
