@@ -656,6 +656,17 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
 @media (prefers-reduced-motion:reduce){.heartbeat{animation:none}}
 
 </style>
+<!-- Meta Pixel (cuenta My Business, conjunto de datos ASESORES) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1356405523050670');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1356405523050670&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -1318,6 +1329,12 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
     document.body.appendChild(r); setTimeout(function(){ r.remove(); }, 600);
   }, {passive:true});
 
+  // Píxel: cualquier clic a WhatsApp cuenta como "Contact"
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest('a[href*="wa.me"],a[href*="whatsapp.com"]');
+    if (a && window.fbq) { try { fbq("track","Contact"); } catch(_){} }
+  }, true);
+
   // Formulario
   var f = q("#regForm");
   q("#cel").addEventListener("input", function(e){ e.target.value = e.target.value.replace(/\D/g,"").slice(0,9); });
@@ -1360,10 +1377,18 @@ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(
     q("#doneName").textContent = nombre.split(" ")[0];
     f.style.display = "none"; q("#done").style.display = "block";
     q("#formBox").scrollIntoView({behavior:"smooth",block:"center"});
-    if (window.fbq) { try { fbq("track","CompleteRegistration"); } catch(_){} }
+    if (window.fbq) { try {
+      var partes = nombre.toLowerCase().split(" ");
+      // Coincidencia avanzada: Meta cifra estos datos antes de enviarlos.
+      fbq("init","1356405523050670",{ph:"51"+cel, fn:partes[0], ln:partes[partes.length-1], ct:ciudad.toLowerCase(), country:"pe"});
+      var datos = {content_name:"Registro Gran Lanzamiento 28NOV", content_category:interes, value:0, currency:"PEN"};
+      fbq("track","Lead",datos);
+      fbq("track","CompleteRegistration",datos);
+    } catch(_){} }
     // Abrir WhatsApp en la misma pestaña (funciona dentro de Facebook/Instagram);
     // si el navegador no lo abre, queda el botón verde "Enviar mi registro por WhatsApp".
-    setTimeout(function(){ window.location.href = url; }, 600);
+    // 900 ms dan tiempo a que salgan los eventos del píxel antes de cambiar de página.
+    setTimeout(function(){ window.location.href = url; }, 900);
   });
 })();
 </script>
